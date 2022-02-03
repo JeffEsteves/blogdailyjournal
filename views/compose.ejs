@@ -1,0 +1,17 @@
+<%- include('../views/partials/header.ejs'); %>
+
+  <h1>Compose</h1>
+  <form action="/compose" method="POST">
+    <div class="form-floating mb-3">
+      <input class="form-control" id="floatingInput" placeholder="Title" type="text" name="postTitle">
+      <label for="postTitle">Title</label>
+    </div>
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="postBody"></textarea>
+      <label for="floatingTextarea">Comments</label>
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit" name="button">Publish</button>
+  </form>
+
+  <%- include('../views/partials/footer.ejs'); %>

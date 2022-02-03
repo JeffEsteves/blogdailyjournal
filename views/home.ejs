@@ -1,0 +1,22 @@
+<%- include('../views/partials/header.ejs'); %>
+
+  <h1>Home</h1>
+
+  <p>
+    <%= mainContent %>
+  </p>
+
+ 
+    <% upPosts.forEach(post=> { %>
+      <h1>
+        <%= post.title %>
+      </h1>
+      <p>
+        <%= post.content.substring(0, 100) + "..." ; %>
+          <a href="/posts/<%= post.title %>  ">Read More</a>
+      </p>
+      <% }); %>
+
+
+
+        <%- include('../views/partials/footer.ejs'); %>
